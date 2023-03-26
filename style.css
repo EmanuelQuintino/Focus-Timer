@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-
     font-size: 6.25%;
     --font-size-standard: 16rem;
 
@@ -36,9 +35,11 @@ body {
     
     background: var(--color-background-body);
     
-    height: 80vh;
+    height: 100vh;
     
-    padding: 196rem 296rem;
+    display: grid;
+    place-content: center;
+    padding: 60rem 0 0;
     
     position: relative;
 }
@@ -177,7 +178,6 @@ main .controls{
     fill: var(--color-text-select);
 }
 
-
 aside.cards{
     width: 308px;
     height: 336px;
@@ -186,6 +186,10 @@ aside.cards{
     grid-template-areas: "A B" 
                          "C D";
     gap: 32rem;
+}
+
+aside.cards button {
+    transition: transform 200ms;
 }
 
 aside.cards button:hover {
@@ -304,8 +308,6 @@ section.slideVolumeClick input[type=range]::-webkit-slider-thumb{
     background: #FFF;
 }
 
-
-
 @keyframes cardAnimationScale {
     0% {
         transform: scale(1);
@@ -347,7 +349,6 @@ section.slideVolumeClick input[type=range]::-webkit-slider-thumb{
 
 
 @media (max-width: 700px) {
-
     body {
         height: 100vh;
 
